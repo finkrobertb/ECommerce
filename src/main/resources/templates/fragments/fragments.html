@@ -10,6 +10,8 @@
     <style>
         html, body, main {
             height: 100%;
+                text-align: center;
+            
         }
  
         body {
@@ -25,11 +27,21 @@
             justify-content: center;
         }
         
+        .jumbotron {
+  			background-image: url("https://doseskateboarding.com/uploads/article/inside_top_image/e26c7b39-2aae-4e96-b956-52989b902054/skateboarding-dectionary-language-terms.jpg");
+  			background-size: cover;
+		}
+		
+		form {
+    		display: inline-block;
+		}
+		
+        
     </style>
 </head>
 <body>
 <div th:fragment="navbar">
-    <nav class="navbar navbar-expand-md navbar-default navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-default navbar-dark bg-dark">
         <a class="navbar-brand" href="/">Tech Talent Skate</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">

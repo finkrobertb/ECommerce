@@ -50,7 +50,7 @@
 				</table>
 
 
-				<form th:action="@{/cart}" method="post" id="updateForm"
+				<form class="dumbbutton" th:action="@{/cart}" method="post" id="updateForm"
 					th:if="${cart.size() > 0}">
 					<!-- form doesn't support PATCH requests, but this tells Spring Boot to use @PatchMapping anyway. -->
 					<input type="hidden" name="_method" value="PATCH" />
@@ -58,13 +58,13 @@
 				</form>
 				<div th:if="${cart.size() == 0}">Nothing in your cart yet.</div>
 			</div>
-		</div>
-		<br>	
+		<br>
 		<form th:if="${cart.size() > 0}" action='/checkout' method='POST'>
 					<input type='hidden' name='amount'
 						th:value='${#aggregates.sum(list)}'>
 					<button type="submit" class="btn btn-primary">Checkout</button>
 				</form>
+				</div>
 	</main>
 
 	<div th:replace="fragments/fragments :: footer"></div>
